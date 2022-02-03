@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>작업따라하기</title>
+    <link rel="stylesheet" href="./index.css">
+    <script src="./jquery-1.12.3.js"></script>
+    <script src="./index.js"></script>
+
+
+</head>
+<body>
+    <!-- 와이어프레임 왼쪽 시작 -->
+    <!-- header>.top>.logo{로고자리}+nav.menu{메뉴자리} -->
+    <header>
+        <div class="top">
+            <div class="logo">
+                <img src="img/logok.png" alt="로고">
+            </div>
+            <nav class="menu">
+                <!-- ul.navi>li>a{이용안내}+ul.submenu>li*3>a^^^li>a{이벤트정보}+ul.submenu>li*3>a^^^li>a{프로그램}+ul.submenu>li*3>a^^^li>a{고객센터}+ul.submenu>li*3>a -->
+                <ul class="navi">
+                    <li>
+                        <a href="#">이용안내</a>
+                        <ul class="submenu">
+                            <li><a href="#">이용방법</a></li>
+                            <li><a href="#">이용시간</a></li>
+                            <li><a href="#">이용요금</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">이벤트정보</a>
+                        <ul class="submenu">
+                            <li><a href="#">현장이벤트</a></li>
+                            <li><a href="#">온라인이벤트</a></li>
+                            <li><a href="#">이벤트예약</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">프로그램</a>
+                        <ul class="submenu">
+                            <li><a href="#">프로그램안내</a></li>
+                            <li><a href="#">온라인예약</a></li>
+                            <li><a href="#">단체예약</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">고객센터</a>
+                        <ul class="submenu">
+                            <li><a href="#">공지사항</a></li>
+                            <li><a href="#">자주묻는질문</a></li>
+                            <li><a href="#">자료실</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+    <!-- 외이어프레임 왼쪽 시작 -->
+    <!-- .bodywrap>.imgslide{이미지 슬라이드 자리}+.contents>ul.tabmenu>li>.notice{공지사항}^li>.gallery{갤러리 자리}^^.otherwrap>.banner{배너자리}+.shortout{바로가기 자리} -->
+    <div class="bodywrap">
+        <div class="imgslide">
+            <ul>
+            <!-- a*3>img+span.imgtext -->
+            <li><a href="#"><img src="./img/banner1.jpg" alt="이미지1"><span class="imgtext">해변에서 즐기는 빛축제</span></a></li>
+            <li><a href="#"><img src="./img/banner2.jpg" alt="이미지2"><span class="imgtext">바다 야경과 빛축제</span></a></li>
+            <li><a href="#"><img src="./img/banner3.jpg" alt="이미지3"><span class="imgtext">불꽃놀이 행사 안내</span></a></li>
+            </ul>
+        </div>
+        <div class="contents">
+            <ul class="tabmenu">
+                <li class="active"><a href="#">공지사항</a>
+                    <div class="notice">
+                        <!-- ul>li*4>a>span -->
+                        <ul>
+                            <li><a href="#">해변에서 펼처지는 노래공연<span>2022.02.04</span></a></li>
+                            <li><a href="#">바다의 야경과 빛공연 관람하기<span>2021.02.04</span></a></li>
+                            <li><a href="#">불꽃놀이 이벤트를 신청하세요<span>2021.02.04</span></a></li>
+                            <li><a href="#">빛축제 단체관람 안내<span>2021.02.04</span></a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="#">갤러리</a>
+                    <div class="gallery">
+                        <!-- ul>li*3>a>img -->
+                        <ul>
+                            <li><a href="#"><img src="./img/Group 3.jpg" alt="갤러리1"></a></li>
+                            <li><a href="#"><img src="./img/Group 4.jpg" alt="갤러리2"></a></li>
+                            <li><a href="#"><img src="./img/Group 5.jpg" alt="갤러리3"></a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+            <div class="otherwrap">
+                <div class="banner">
+                    <!-- a>img+h4.bntext -->
+                    <a href="#">
+                        <img src="./img/Group 4.jpg" alt="배너">
+                        <h4 class="bntext">배너</h4>
+                    </a>
+                </div>
+                <div class="shortcut">
+                    <!-- a>img+h4.sctext -->
+                    <a href="#">
+                        <img src="./img/Group 5.jpg" alt="바로가기">
+                        <h4 class="sctext">바로가기</h4>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal">
+        <div class="modal_up">
+            <div class="uptitle">빛축제 공연 정보</div>
+            <div class="upbody">
+                빛축제의 모든 공연과 전시정보를 한눈에 볼 수 있습니다.
+                빛축제 관련 공연과 캘린더 배포, 자전거 투어 행사, 바다 야경 명소,
+                빛나는 해변의 다리 등 자연환경을 살린 아름다운 해변에서의 빛축제
+                정보를 안내해 드립니다.
+            </div>
+            <div class="btn">닫기</div>
+        </div>
+    </div>
+
+
+    <!-- footer>.bottom>.btlogo{로고자리}+.site>.btmenu{하단메뉴 자리}+.copy{copyright 자리} -->
+    <footer>
+        <div class="bottom">
+            <div class="btlogo">
+                <a href="#"><img src="./img/logok.png" alt="1"></a>
+            </div>
+            <div class="site">
+                <div class="btmenu">
+                    <!-- ul>li*3>a{하단메뉴$} -->
+                    <ul>
+                        <li><a href="#">하단메뉴1</a></li>
+                        <li><a href="#">하단메뉴2</a></li>
+                        <li><a href="#">하단메뉴3</a></li>
+                    </ul>
+                </div>
+                <div class="copy">
+                    COPYRIGHT @ by WEBDESIGN. ALL RIGHTS RESERVED
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    
+</body>
+</html>
